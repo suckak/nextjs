@@ -9,10 +9,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [theme, updateTheme] = useState(defaultTheme);
 
   useEffect(() => {
-    console.log('just 1', pageProps);
+    const { themeFetched = defaultTheme } = pageProps;
+    if (themeFetched.id != theme.id) {
+      updateTheme(themeFetched);
+    }
   }, []);
 
-  console.log('a', pageProps);
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} updateTheme={updateTheme} />

@@ -4,7 +4,7 @@ import { Hotel } from '../types/types';
 
 const imgUrl = 'media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg';
 
-const Content = ({ hotel }) => {
+const Content = ({ hotel }: any) => {
   return (
     <StyledDiv>
       <p>{hotel.name}</p>
@@ -14,7 +14,7 @@ const Content = ({ hotel }) => {
   );
 };
 
-const Landing = ({ hotels }) => {
+const Landing = ({ hotels }: any) => {
   return (
     <div>
       {hotels &&

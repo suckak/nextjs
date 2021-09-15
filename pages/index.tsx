@@ -37,10 +37,20 @@ export async function getStaticProps(config: any) {
       }
     `
   });
+
+  const theme = await Promise.resolve({
+    id: 1,
+    primaryColor: '#F00',
+    secundaryColor: '#F00',
+    accentColor: '#F00',
+    fontColor: '#F00'
+  });
+
   return {
     props: {
-      ...(await serverSideTranslations(config.locale, ['common'])),
+      ...(await serverSideTranslations(config.locale, ['common', 'nav'])),
       hotels: data.countries.slice(0, 4)
+      //themeFetched: theme
     }
   };
 }

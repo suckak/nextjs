@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    id: number;
     primaryColor: string;
     secundaryColor: string;
     accentColor: string;
@@ -11,6 +12,7 @@ declare module 'styled-components' {
 }
 
 export const defaultTheme: DefaultTheme = {
+  id: 0,
   primaryColor: '#FFA69E',
   secundaryColor: '#FF7E6B',
   accentColor: '#A9F0D1',
@@ -18,6 +20,7 @@ export const defaultTheme: DefaultTheme = {
 };
 
 export const hotel1: DefaultTheme = {
+  id: 1,
   primaryColor: '#fb6107',
   secundaryColor: '#f3de2c',
   accentColor: '#7cb518',

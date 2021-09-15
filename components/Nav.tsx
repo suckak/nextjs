@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 const Nav = () => {
+  const { t } = useTranslation('nav');
+
   return (
     <StyledNav>
       <ul>
-        <li>Home</li>
-        <li>Rooms</li>
-        <li>Booking</li>
+        <li>{t('home')}</li>
+        <li>{t('rooms')}</li>
+        <li>{t('booking')}</li>
         <li>
-          <Link href="/detail">Contact</Link>
+          <Link href="/detail">{t('about')}</Link>
         </li>
       </ul>
     </StyledNav>
